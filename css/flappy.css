@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "Pixel";
+    src: url("../fonts/Pixel.ttf");
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-color: deepskyblue;
+    overflow: hidden;
+}
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+    /* bottom:50%; */
+}
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg,#639301,#A5E82E);
+    border: 2px solid #000;
+}
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg,#639301,#A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.progresso{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 1;
+}
+/*
+body{
+    width: 100%;
+    height: 100%;
+}
+.tela {
+    width: 1400px;
+    height:500px;
+    /* background-color: white; 
+    display: grid;
+    grid-template-columns: repeat(20,5%) ;
+    grid-template-rows: repeat(10, 10%) ;
+}
+.telaVisivel {
+    display: flex;
+    background-color: rgb(0, 204, 255);
+    grid-column-start: 3;
+    grid-column-end: 19;
+    grid-row-start: 1;
+    grid-row-end: 11;
+}
+.score {
+    padding: 10px;
+    text-align: center;
+    grid-column-start: 18;
+    grid-row-start: 1;
+    font-size: 30px;
+    color: black;
+    z-index: 1;    
+}
+.regiaoBarreira {
+    grid-column-start: 1;
+    grid-column-end: 20;
+    grid-row-start: 1;
+    grid-row-end: 11;
+}
+.barreira{
+    position: relative;
+    display: unset;
+    width: 5%;
+    height: 100%;
+    left: 0px;
+}
+.barreira > .canos {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100%;
+}
+.canos > .blocoA {
+    width: 100%;
+    height: 70%;
+    justify-content: flex-start;
+}
+.canos > .blocoB {
+    width: 100%;
+    height: 6%;
+    justify-content: flex-end;
+}
+.canos > .blocoA, .canos > .blocoB {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.parteA {
+    background-image: linear-gradient(to right, green, rgba(41, 190, 41, 0.589));
+    box-shadow: -15px 1px 150px 2px  black;
+    width: 75%;
+    flex-grow: 1;
+}
+.parteB {
+    background-image: linear-gradient(to right, green, rgba(41, 190, 41, 0.678));
+    box-shadow: -15px 1px 150px 2px  black;
+    border-radius: 1px;
+    width: 100%;
+    height: 28px;
+}
+.regiaoPassaro {
+    position: relative;
+    box-shadow: -15px 1px 250px 2px  black;
+    left: 46%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0); 
+}
+.passaro {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    top: 250px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+*/
+
