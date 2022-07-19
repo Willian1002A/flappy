@@ -5,7 +5,6 @@
     font-family: "Pixel";
     src: url("../fonts/Pixel.ttf");
 }
-
 [wm-flappy] {
     position: relative;
     border: 5px solid dodgerblue;
@@ -54,6 +53,77 @@
     font-family: Pixel;
     font-size: 70px;
     z-index: 1;
+}
+*{
+    --base-resolution: 1920;
+    --actual-resolution: 360;
+    --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+}
+@media (min-width: 640px) {
+    *{
+        --actual-resolution: 640;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1024px) {
+    *{
+        --actual-resolution: 1024;
+        --mult-factor: calc(1024/1920);
+    }
+}
+@media (min-width: 1360px) {
+    *{
+        --actual-resolution: 1360;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1920px) {
+    *{
+        --actual-resolution: 1920;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+*{
+    --square-button-width-height: calc(200px * var(--mult-factor));
+    --wm-flappy-width: calc(1200px * var(--mult-factor));
+    --wm-flappy-height: calc(700px * var(--mult-factor));
+    --wm-flappy-border-size: calc(5px * var(--mult-factor));
+    --wm-flappy-margin: calc(15px * var(--mult-factor));
+    --passaro-width: calc(60px * var(--mult-factor));
+    --passaro-left-pos: calc(30px * var(--mult-factor));
+    --barreira-borda-width: calc(130px * var(--mult-factor));
+    --barreira-borda-height: calc(30px * var(--mult-factor));
+    --barreira-border-size: calc(2px * var(--mult-factor));
+    --barreira-corpo-width: calc(110px * var(--mult-factor));
+    --barreira-corpo-height: calc(150px * var(--mult-factor));
+    --progresso-pos: calc(10px * var(--mult-factor));
+    --progresso-font-size: calc(70px * var(--mult-factor));
+}
+[wm-flappy] {
+    width: var(--wm-flappy-width);
+    height: var(--wm-flappy-height);
+    border: var(--wm-flappy-border-size) solid dodgerblue;
+    margin: var(--wm-flappy-margin);
+}
+.passaro {
+    width: var(--passaro-width);
+    left: calc(50% - var(--passaro-left-pos));
+}
+.barreira .borda {
+    width: var(--barreira-borda-width);
+    height: var(--barreira-borda-height);
+    border: var(--barreira-border-size) solid #000;
+}
+.barreira .corpo {
+    width: var(--barreira-corpo-width);
+    height: var(--barreira-corpo-height);
+    border-left: var(--barreira-border-size) solid #000;
+    border-right: var(--barreira-border-size) solid #000;
+}
+.progresso{
+    top: var(--progresso-pos);
+    right: var(--progresso-pos);
+    font-size: var(--progresso-font-size);
 }
 /*
 body{
